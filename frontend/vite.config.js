@@ -13,7 +13,9 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    host: true,
     open: true,
+    allowedHosts: ['mirofish.mschiavo.com'],
     proxy: {
       '/api': {
         target: 'http://localhost:5001',
